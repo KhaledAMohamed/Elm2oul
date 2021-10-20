@@ -1,8 +1,16 @@
-import 'dart:ffi';
 
+import 'package:elm2oul/ChangeUserProfile/Profile.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
+import 'ChangeCompanyProfile/ChangeCompanyPassword.dart';
+import 'ChangeCompanyProfile/CompanyProfile.dart';
+import 'ChangeUserProfile/ChangeName.dart';
+import 'ChangeUserProfile/ChangePassword.dart';
+import 'ChangeUserProfile/ChangePhone.dart';
+import 'Reset/FirstReset.dart';
+import 'Status/ChangeStatus.dart';
+import 'Status/Status.dart';
 
 
 void main() {
@@ -38,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //   title: Text("Elm2oul"),
       // ),
       body: SplashScreenView(
-        navigateRoute: MyApp(),
+        navigateRoute: ChangePassword(),
         duration: 3000,
         imageSize: 250,
         imageSrc: "lib/Images/splashImage.png",
@@ -65,3 +73,4 @@ class _MyHomePageState extends State<MyHomePage> {
     ],
   ).createShader(Rect.fromLTWH(200.0,70.0, 200.0,1.0));
 }
+
