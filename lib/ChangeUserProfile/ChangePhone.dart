@@ -60,11 +60,14 @@ class ChangePhone extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         InkWell(
-                          onTap: ()=>Helper.gotoScreen(context, Constant.Home),
+                          onTap: (){
+
+                            Helper.gotoScreen(context, Constant.Profile);
+                          },
                           child: arrowBack(),
                         ),
                         SizedBox(width: 80,),
-                        textView("تعديل رقم الهاتف",0.3),
+                        textView("تعديل رقم الهاتف",0.3,color: Colors.white),
                       ],
                     ),
                   ),
@@ -82,13 +85,13 @@ class ChangePhone extends StatelessWidget {
                             topRight: const Radius.circular(40.0))),
                     child: Column(
                       children: [
-                        SizedBox(height: 100,),
+                        SizedBox(height: 100),
                         Padding(
                           padding: const EdgeInsets.only(right: 50),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              textView("رقم الهاتف", 0.0),
+                              textView("رقم الهاتف", 0.0,color: Colors.white),
                             ],
                           ),
                         ),
@@ -96,7 +99,7 @@ class ChangePhone extends StatelessWidget {
                         textFieldView(TextInputType.phone, 11, TextDirection.ltr),
                         SizedBox(height: 20),
                         whiteDivider(),
-                        Expanded(child:buttonView("حفظ"),),
+                        Expanded(child:buttonView("حفظ")),
                       ],
                     ),
                   ),

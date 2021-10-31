@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 import 'Component/circleAvatar.dart';
+import 'Uitils/Constant.dart';
+import 'Uitils/Helper.dart';
 
 class compDetail extends StatelessWidget {
   @override
@@ -36,7 +38,10 @@ class compDetail extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10),
-                      child: arrowBack(),
+                      child:   InkWell(
+                        onTap: ()=>Helper.gotoScreen(context, Constant.Profile),
+                        child: arrowBack(),
+                      ),
                     ),
                     Spacer(),
                     Padding(

@@ -65,7 +65,7 @@ flutter:
       - lib/Images/Background.jpeg
       - lib/Images/ArrowBack.png
       - lib/Images/QuarterImage.png
-      - lib/Images/Whatsapp.jpeg
+      - lib/Images/WhatsApp.png
   #     - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -62,11 +62,11 @@ class ChangeName extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         InkWell(
-                          onTap: ()=>Helper.gotoScreen(context, Constant.Home),
+                          onTap: ()=>Helper.gotoScreen(context, Constant.Profile),
                           child: arrowBack(),
                         ),
                         SizedBox(width: 100),
-                        textView("تعديل الاسم", 0.3)
+                        textView("تعديل الاسم", 0.3,color: Colors.white)
                       ],
                     ),
                   ),
@@ -100,7 +100,7 @@ class ChangeName extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                textView("الاسم", 0.0),
+                                textView("الاسم", 0.0,color: Colors.white,),
                               ],
                             ),
                           ),
@@ -114,8 +114,7 @@ class ChangeName extends StatelessWidget {
                           SizedBox(height: 20),
 
                           Expanded(
-                            child: buttonView("حفظ"),
-                          )
+                            child: buttonView("حفظ"))
                         ],
                       ),
                     ),

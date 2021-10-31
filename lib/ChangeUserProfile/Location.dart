@@ -69,7 +69,7 @@ class Location extends StatelessWidget {
               padding: const EdgeInsets.only(left: 30,right: 30),
               child: Container(
                 child: textView("الجيزه 6 اكتوبر الحي المتميز 74 شارع الزهور شقه 6 "
-                    "الحصري عند الككنيسه ", 1.5),
+                    "الحصري عند الككنيسه ", 1.5,color: Colors.white),
               ),
             ),
             SizedBox(height: 100,),

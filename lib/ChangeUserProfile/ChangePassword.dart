@@ -66,11 +66,11 @@ class _ChangePasswordState extends State<ChangePassword> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         InkWell(
-                          onTap: ()=>Helper.gotoScreen(context, Constant.Home),
+                          onTap: ()=>Helper.gotoScreen(context, Constant.Profile),
                           child: arrowBack(),
                         ),
                         SizedBox(width: 80,),
-                        textView("تعديل كلمة المرور", 0.3)
+                        textView("تعديل كلمة المرور", 0.3,color: Colors.white)
                       ],
                     ),
                   ),
@@ -99,7 +99,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    textView("كلمة المرور الجديده", 0.0)
+                                    textView("كلمة المرور الجديده", 0.0,color: Colors.white)
                                   ],
                                 ),
                                 SizedBox(height:10),
@@ -110,7 +110,8 @@ class _ChangePasswordState extends State<ChangePassword> {
                                   child:  Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
-                                      textView("تاكيد كلمة المرور", 0.0)
+                                      textView("تاكيد كلمة المرور", 0.0,
+                                        color: Colors.white)
                                     ],
                                   ),
                                 ),
@@ -124,7 +125,7 @@ class _ChangePasswordState extends State<ChangePassword> {
 
                           SizedBox(height: 40),
                           whiteDivider(),
-                          Expanded(child: buttonView("حفظ"),)
+                          Expanded(child: buttonView("حفظ"))
                         ],
                       ),
                     ),

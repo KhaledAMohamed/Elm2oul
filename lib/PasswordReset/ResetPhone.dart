@@ -29,15 +29,17 @@ class ResetPhone extends StatelessWidget {
             SizedBox(height: 50),
             Row(
               children: [
-                arrowBack(),
+                InkWell(
+                  onTap:()=>Helper.gotoScreen(context, Constant.Login),
+                    child: arrowBack()),
                 SizedBox(width: 75),
-                textView('هل نسيت كلمة المرور ؟', 3),
+                textView('هل نسيت كلمة المرور ؟', 3,color: Colors.white,),
               ],
             ),
             SizedBox(height: 30),
             Padding(
-              padding: const EdgeInsets.only(right: 20),
-              child: textView("رقم الهاتف", 3),
+              padding: const EdgeInsets.only(right: 25),
+              child: textView("رقم الهاتف", 3,color: Colors.white),
             ),
             Padding(
               padding: const EdgeInsets.only(right:15 ),
@@ -55,9 +57,9 @@ class ResetPhone extends StatelessWidget {
               padding: const EdgeInsets.only(left: 10,right: 10),
               child: whiteDivider(),
             ),
-            InkWell(
-                child: Expanded(child: buttonView("ارسال")),
-            onTap: ()=> Helper.gotoScreen(context, Constant.ResetCode)),
+            Expanded(child: InkWell(
+              onTap:()=> Helper.gotoScreen(context, Constant.ResetCode),
+                child: buttonView("ارسال"))),
           ],
         ),
       ),

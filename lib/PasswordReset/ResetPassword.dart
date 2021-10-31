@@ -2,6 +2,8 @@ import 'package:elm2oul/Component/TextFieldViewPassword.dart';
 import 'package:elm2oul/Component/arrowBackIcon.dart';
 import 'package:elm2oul/Component/bottonView.dart';
 import 'package:elm2oul/Component/textView.dart';
+import 'package:elm2oul/Uitils/Constant.dart';
+import 'package:elm2oul/Uitils/Helper.dart';
 import 'package:flutter/material.dart';
 
 class ResetPassword extends StatelessWidget {
@@ -21,21 +23,13 @@ class ResetPassword extends StatelessWidget {
         ),
         child: Column(
           children: [
-            SizedBox(height: 60),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start, //change here don't //worked
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                arrowBack(),
-              ],
-            ),
-            SizedBox(height:80),
+            SizedBox(height:140),
             Container(
               margin: const EdgeInsets.only(top: 15.0,right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  textView("كلمة المرور الجديده", 0.0)
+                  textView("كلمة المرور الجديده", 0.0,color: Colors.white)
                 ],
               ),
             ),
@@ -50,7 +44,7 @@ class ResetPassword extends StatelessWidget {
               child:  Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  textView("تاكيد كلمة المرور", 0.0)
+                  textView("تاكيد كلمة المرور", 0.0,color: Colors.white)
                 ],
               ),
             ),
@@ -59,7 +53,9 @@ class ResetPassword extends StatelessWidget {
               padding: const EdgeInsets.only(left: 15,right: 15),
               child: TextFieldViewPassword(),
             ),
-            Expanded(child: buttonView("حفظ")),
+            Expanded(child: InkWell(
+              onTap: ()=>Helper.gotoScreen(context, Constant.Login),
+                child: buttonView("حفظ"))),
           ],
         ),
 

@@ -5,6 +5,8 @@ class Helper{
     // Navigator.of(context).push(MaterialPageRoute(builder: (_) {
     //   return widget;
     // }));
+    FocusScope.of(context).unfocus();
+
     Navigator.of(context).pushNamed(widget);
   }
 }

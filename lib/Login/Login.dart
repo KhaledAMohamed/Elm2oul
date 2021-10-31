@@ -38,7 +38,7 @@ class Login extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  textView("مرحبك بك", 3.5),
+                  textView("مرحبك بك", 3.5,color: Colors.white),
                 ],
               ),
               SizedBox(height: 30),
@@ -89,26 +89,33 @@ class Login extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right
                     : 45),
-                child: textView("رقم الهاتف", 1.5),
+                child: textView("رقم الهاتف", 1.5,color: Colors.white,),
               ),
               textFieldView(TextInputType.phone,11,TextDirection.ltr),
               SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(right
                     : 45),
-                child: textView("كلمة المرور ", 1.5),
+                child: textView("كلمة المرور ", 1.5,color: Colors.white,),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 30,right: 30),
                 child: TextFieldViewPassword(),
               ),
-              SizedBox(height: 40,),
-
+              SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    onTap: ()=>Helper.gotoScreen(context, Constant.ResetPhone),
+                      child:
+                      textView("هل نسيت كلمة المرور ؟", 2.2,color: Colors.white)
+                  ),
+                ],
+              ),
               Flexible (child: InkWell(
                   onTap: ()=>Helper.gotoScreen(context, Constant.Home),
                   child: buttonView("دخول")))
-
-
 
             ],
           )

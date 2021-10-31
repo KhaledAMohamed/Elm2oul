@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class Eld3m extends StatelessWidget {
-  const Eld3m({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,13 +29,13 @@ class Eld3m extends StatelessWidget {
                   child: arrowBack(),
                 ),
                 SizedBox(width: 110),
-                textView("للتواصل معنا", 4),
+                textView("للتواصل معنا", 4,color: Colors.white),
               ],
             ),
             SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.only(right: 20),
-              child: textView( 'للتواصل لحل المشكلات التي تواجهك', 1.5),
+              child: textView( 'للتواصل لحل المشكلات التي تواجهك', 1.5,color: Colors.white),
             ),
             SizedBox(height: 30),
             Padding(
@@ -47,7 +45,7 @@ class Eld3m extends StatelessWidget {
             // SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.all(10),
-              child: textView('السعودية,مكة المكرمة بجوار فندق كورال', 1),
+              child: textView('السعودية,مكة المكرمة بجوار فندق كورال', 1,color: Colors.white),
             ),
             SizedBox(height: 20),
             Padding(
@@ -56,7 +54,7 @@ class Eld3m extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(10),
-              child: textView('0100********', 1),
+              child: textView('0100********', 1,color: Colors.white),
             ),
             SizedBox(height: 20),
             Padding(
@@ -65,7 +63,7 @@ class Eld3m extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(10),
-              child: textView('khaledalaa58@yahoo.com', 1),
+              child: textView('khaledalaa58@yahoo.com', 1,color: Colors.white),
             ),
             SizedBox(height: 60),
             Row(
@@ -80,10 +78,11 @@ class Eld3m extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.only(left: 10),
                     decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(44)),
                       color: Colors.white,
                       image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage('lib/Images/Whatsapp.jpeg'),
+                        image: AssetImage('lib/Images/WhatsApp.png'),
                       ),
                     ),
                   ),

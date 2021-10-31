@@ -16,7 +16,6 @@ import 'ChangeUserProfile/Location.dart';
 import 'Home.dart';
 import 'Login/Login.dart';
 import 'PasswordReset/ResetCode.dart';
-import 'Reset/FirstReset.dart';
 import 'Status/ChangeStatus.dart';
 import 'Status/Status.dart';
 import 'faveorite.dart';
@@ -34,6 +33,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        textTheme: TextTheme(
+          bodyText1: TextStyle(
+            color: Colors.white
+          ),
+        ),
       ),
       home: Login(),
       routes: {
@@ -41,13 +45,15 @@ class MyApp extends StatelessWidget {
         Constant.ChangePhone:(context) =>ChangePhone(),
         Constant.ChangePassword:(context) =>ChangePassword(),
         Constant.Eld3m:(context) =>Eld3m(),
-        Constant.ResetCode:(context) =>ResetCode(),
         Constant.Register:(context) =>Register(),
         Constant.Login:(context) =>Login(),
         Constant.Profile:(context) => Profile(),
         Constant.Location:(context) => Location(),
         Constant.Home:(context)=>DemoPageState(),
         Constant.Favorite:(context)=>compDetail(),
+        Constant.ResetCode:(context) =>ResetCode(),
+        Constant.ResetPhone:(context) =>ResetPhone(),
+        Constant.ResetPassword:(context) =>ResetPassword(),
 
       },
     );

@@ -8,8 +8,8 @@ class circleAvater extends StatelessWidget{
   Widget build(BuildContext context) {
     return CircleAvatar(
       backgroundImage: NetworkImage(_imageUri),
-      maxRadius: 30,
-      minRadius: 30,
+      maxRadius: 50,
+      minRadius: 50,
     );
   }
 

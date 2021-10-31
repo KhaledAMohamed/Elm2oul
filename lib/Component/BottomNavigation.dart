@@ -6,8 +6,10 @@ class BottonNavgation extends StatelessWidget {
   Color ColorHome;
   Color ColorLocation;
   Color ColorProfile;
- // Route route;
-  BottonNavgation(this.ColorLocation,this.ColorHome,this.ColorProfile);
+
+  // Route route;
+  BottonNavgation(this.ColorLocation, this.ColorHome, this.ColorProfile);
+
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
@@ -20,48 +22,55 @@ class BottonNavgation extends StatelessWidget {
           children: <Widget>[
             Container(
               margin: EdgeInsets.only(left: 28.0),
-              padding: EdgeInsets.only(right: 5,bottom: 5),
+              padding: EdgeInsets.only(left: 5, bottom: 5),
               decoration: BoxDecoration(
                 color: ColorLocation,
-                  borderRadius: BorderRadius.all(Radius.circular(120.0)),
+                borderRadius: BorderRadius.all(Radius.circular(120.0)),
               ),
               child: IconButton(
                 iconSize: 30.0,
                 // padding: EdgeInsets.only(left: 28.0),
-                icon: Icon(Icons.location_on,color: Colors.black,size: 35),
-                onPressed: () => Helper.gotoScreen(context, Constant.Location),
+                icon: Icon(Icons.location_on, color: Colors.black, size: 35),
+                onPressed: () {
+                  if (ModalRoute.of(context)!.settings.name !=
+                      Constant.Location) {
+                    Helper.gotoScreen(context, Constant.Location);
+                  }
+                },
               ),
             ),
             Container(
-              padding: EdgeInsets.only(right: 5,bottom: 5),
+              padding: EdgeInsets.only(right: 5, bottom: 5),
               decoration: BoxDecoration(
-
                 color: ColorHome,
                 borderRadius: BorderRadius.all(Radius.circular(120.0)),
               ),
               child: IconButton(
                 iconSize: 30.0,
-                icon: Icon(Icons.home,color: Colors.black,size: 35),
+                icon: Icon(Icons.home, color: Colors.black, size: 35),
                 onPressed: () {
-                  Helper.gotoScreen(context, Constant.Home);
-                  // if (Route.settings.name != Constant.Home) {
-                  //   Helper.gotoScreen(context, Constant.Home);
-                  // }
-
+                  if (ModalRoute.of(context)!.settings.name != Constant.Home) {
+                    Helper.gotoScreen(context, Constant.Home);
+                  }
                 },
               ),
             ),
             Container(
               margin: EdgeInsets.only(right: 25.0),
-              padding: EdgeInsets.only(right: 5,bottom: 5),
+              padding: EdgeInsets.only(right: 5, bottom: 5),
               decoration: BoxDecoration(
                 color: ColorProfile,
                 borderRadius: BorderRadius.all(Radius.circular(120.0)),
               ),
               child: IconButton(
                 iconSize: 30.0,
-                icon: Icon(Icons.person,color: Colors.black,size: 35),
-                onPressed: () => Helper.gotoScreen(context, Constant.Profile),
+                icon: Icon(Icons.person, color: Colors.black, size: 35),
+                onPressed: () {
+                  if (ModalRoute.of(context)!.settings.name !=
+                      Constant.Profile) {
+                    Helper.gotoScreen(context, Constant.Profile);
+                  }
+                },
               ),
             ),
           ],

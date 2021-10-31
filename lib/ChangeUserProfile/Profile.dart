@@ -95,7 +95,7 @@ class Profile extends StatelessWidget {
                       children: [
                         Container(
                           margin: EdgeInsets.only(top: 25),
-                          child: textView("اححمد مجدي", 3),
+                          child: textView("اححمد مجدي", 3,color: Colors.white),
                         ),
                         SizedBox(height: 25),
                         InkWell(
@@ -108,7 +108,7 @@ class Profile extends StatelessWidget {
                                 Spacer(),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 30.0),
-                                  child: textView("الشركات المفضله", 3),
+                                  child: textView("الشركات المفضله", 3,color: Colors.white),
                                 )
                               ],
                             ),
@@ -128,7 +128,7 @@ class Profile extends StatelessWidget {
                                 Spacer(),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 30.0),
-                                  child: textView("تعديل الاسم", 3),
+                                  child: textView("تعديل الاسم", 3,color: Colors.white),
                                 )
                               ],
                             ),
@@ -146,7 +146,7 @@ class Profile extends StatelessWidget {
                                 Spacer(),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 30.0),
-                                  child: textView("تعديل كلمه المرور", 3),
+                                  child: textView("تعديل كلمه المرور", 3,color: Colors.white),
                                 )
                               ],
                             ),
@@ -164,7 +164,7 @@ class Profile extends StatelessWidget {
                                 Spacer(),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 30.0),
-                                  child: textView("تعديل رقم الهاتف", 3),
+                                  child: textView("تعديل رقم الهاتف", 3,color: Colors.white),
                                 )
                               ],
                             ),
@@ -182,7 +182,7 @@ class Profile extends StatelessWidget {
                                 Spacer(),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 30.0),
-                                  child: textView("الدعم", 3),
+                                  child: textView("الدعم", 3,color: Colors.white),
                                 )
                               ],
                             ),
@@ -201,7 +201,7 @@ class Profile extends StatelessWidget {
                                     Spacer(),
                                     Padding(
                                       padding: const EdgeInsets.only(right: 30.0),
-                                      child: textView("تسجيل الخروج", 3),
+                                      child: textView("تسجيل الخروج", 3,color: Colors.white),
                                     )
                                   ],
                                 ),

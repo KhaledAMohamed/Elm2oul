@@ -2,6 +2,8 @@ import 'package:elm2oul/Component/arrowBackIcon.dart';
 import 'package:elm2oul/Component/bottonPasswordCode.dart';
 import 'package:elm2oul/Component/bottonView.dart';
 import 'package:elm2oul/Component/textView.dart';
+import 'package:elm2oul/Uitils/Constant.dart';
+import 'package:elm2oul/Uitils/Helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -26,14 +28,16 @@ class ResetCode extends StatelessWidget {
           SizedBox(height: 50),
           Row(
             children: [
-              arrowBack(),
+              InkWell(
+                  onTap:()=>Helper.gotoScreen(context, Constant.ResetPhone),
+                  child: arrowBack()),
               SizedBox(width: 75),
-              textView('هل نسيت كلمة المرور ؟', 3),
+              textView('هل نسيت كلمة المرور ؟', 3,color: Colors.white),
             ],
           ),
           SizedBox(height: 30),
           Padding(
-            padding: const EdgeInsets.only(right: 20),
+            padding: const EdgeInsets.only(right: 25),
             child: textView("ادخل الكود", 3),
           ),
           SizedBox(height: 30),
@@ -58,7 +62,9 @@ class ResetCode extends StatelessWidget {
                 ),
               ],
             ),
-          Expanded(child: buttonView("ارسال الكود"))
+          Expanded(child: InkWell(
+            onTap: ()=>Helper.gotoScreen(context, Constant.ResetPassword),
+              child: buttonView("ارسال الكود")))
           ],
       ),
     ),
