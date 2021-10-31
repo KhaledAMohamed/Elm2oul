@@ -1,3 +1,12 @@
+import 'package:elm2oul/Component/TextFieldViewPassword.dart';
+import 'package:elm2oul/Component/arrowBackIcon.dart';
+import 'package:elm2oul/Component/bottonView.dart';
+import 'package:elm2oul/Component/circleAvatar.dart';
+import 'package:elm2oul/Component/textView.dart';
+import 'package:elm2oul/Component/whiteContainer.dart';
+import 'package:elm2oul/Component/whiteDvider.dart';
+import 'package:elm2oul/Uitils/Constant.dart';
+import 'package:elm2oul/Uitils/Helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -9,12 +18,6 @@ class ChangePassword extends StatefulWidget {
 }
 
 class _ChangePasswordState extends State<ChangePassword> {
-  var _passwordVisible;
-  @override
-  void initState() {
-    _passwordVisible = false;
-    super.initState();
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +41,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                 Positioned(
                   child: Container(
                     width: double.infinity,
-                    height: 150,
+                    height: 200,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
@@ -62,35 +65,17 @@ class _ChangePasswordState extends State<ChangePassword> {
                       mainAxisAlignment: MainAxisAlignment.start, //change here don't //worked
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(width: 30,),
-                        Icon(
-                          Icons.arrow_back_ios
+                        InkWell(
+                          onTap: ()=>Helper.gotoScreen(context, Constant.Home),
+                          child: arrowBack(),
                         ),
-                        SizedBox(width: 50,),
-                        Text(
-                          "تعديل كلمة المرور",
-                          style: TextStyle(
-                            color: HexColor("#FFFFFF"),
-                            fontSize: 30,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
+                        SizedBox(width: 80,),
+                        textView("تعديل كلمة المرور", 0.3)
                       ],
                     ),
                   ),
                 ),
-                Positioned(
-                  child: Container(
-                    width: double.infinity,
-                    height: 20,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        color: HexColor("#FFFFFF"),
-                        borderRadius: BorderRadius.only(
-                            topLeft: const Radius.circular(40.0),
-                            topRight: const Radius.circular(40.0))),
-                  ),
-                ),
+                whiteContainer(),
                 Positioned(
                     child: Expanded(child: Container(
                       width: double.infinity,
@@ -114,90 +99,32 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Text("كلمة المرور ",
-                                      textDirection:TextDirection.rtl,
-                                    style: TextStyle(
-                                      color: Colors.white,
-
-                                    ),
-                                    ),
+                                    textView("كلمة المرور الجديده", 0.0)
                                   ],
                                 ),
-                                Container(
-                                  padding: EdgeInsets.only(left: 10),
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.all(Radius
-                                          .circular(20))
-                                  ),
-                                  child: TextField(
-                                    obscureText: true,
-                                    decoration: InputDecoration(
-                                      border: InputBorder.none,
-                                      hintText: "new  password",
-                                      icon: Icon(Icons.remove_red_eye_outlined,
-                                          color:Colors.black),
-                                    ),
-                                  ),
-                                ),
-
+                                SizedBox(height:10),
+                                TextFieldViewPassword(),
+                                SizedBox(height:30),
                                 Container(
                                   margin: const EdgeInsets.only(top: 15.0),
                                   child:  Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
-                                      Text("تاكيد كلمة المرور",
-                                        textDirection:TextDirection.rtl,
-                                        style: TextStyle(
-                                          color: Colors.white,
-
-                                        ),
-                                      ),
+                                      textView("تاكيد كلمة المرور", 0.0)
                                     ],
                                   ),
                                 ),
-
-                                Container(
-                                  padding: EdgeInsets.only(left: 10),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.all(Radius
-                                        .circular(20))
-                                  ),
-                                  child: TextField(
-                                    obscureText: true,
-                                    decoration: InputDecoration(
-                                      border: InputBorder.none,
-                                      hintText: "Confirm password",
-                                      icon: Icon(Icons.remove_red_eye_outlined,
-                                          color:Colors.black),
-                                    ),
-                                  ),
-                                ),
+                                SizedBox(height:10),
+                                TextFieldViewPassword(),
                               ],
                             )
                           ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Expanded(
-                            child: Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                margin: const EdgeInsets.only(bottom: 20.0),
-                                width: 200,
-                                height: 45,
-                                decoration: BoxDecoration(
-                                    color: Colors.green,
-                                    borderRadius:
-                                    BorderRadius.all(Radius.circular(30.0))),
-                                child: TextButton(
-                                  onPressed: null,
-                                  child: Text("حفظ"),
-                                ),
-                              ),
-                            ),
-                          )
+
+
+
+                          SizedBox(height: 40),
+                          whiteDivider(),
+                          Expanded(child: buttonView("حفظ"),)
                         ],
                       ),
                     ),
@@ -205,13 +132,9 @@ class _ChangePasswordState extends State<ChangePassword> {
               ],
             ),
             Positioned(
-              child: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    'https://www.woolha.com/media/2020/03/eevee.png'),
-                maxRadius: 60,
-                minRadius: 60,
-              ),
-              top: 110,
+              child:circleAvater(
+                  'https://www.woolha.com/media/2020/03/eevee.png'),
+              top: 150,
             ),
           ])),
     );

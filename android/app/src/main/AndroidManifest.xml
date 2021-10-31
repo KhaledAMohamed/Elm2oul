@@ -1,8 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.elm2oul">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="elm2oul"
         android:icon="@mipmap/ic_launcher">
+
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyCDUwnH3E-fB_bH8uzF9nahpn_Hr5ZIBFk"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -37,5 +42,7 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+
     </application>
 </manifest>

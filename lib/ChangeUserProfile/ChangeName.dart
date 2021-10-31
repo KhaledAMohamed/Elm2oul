@@ -1,3 +1,11 @@
+import 'package:elm2oul/Component/arrowBackIcon.dart';
+import 'package:elm2oul/Component/bottonView.dart';
+import 'package:elm2oul/Component/circleAvatar.dart';
+import 'package:elm2oul/Component/textFieldView.dart';
+import 'package:elm2oul/Component/textView.dart';
+import 'package:elm2oul/Component/whiteDvider.dart';
+import 'package:elm2oul/Uitils/Constant.dart';
+import 'package:elm2oul/Uitils/Helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -22,13 +30,14 @@ class ChangeName extends StatelessWidget {
               ],
             ),
           ),
+
           child: Stack(alignment: Alignment.topCenter, children: [
             Column(
               children: [
                 Positioned(
                   child: Container(
                     width: double.infinity,
-                    height: 150,
+                    height: 200,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
@@ -52,19 +61,12 @@ class ChangeName extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start, //change here don't //worked
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(width: 30,),
-                        Image.asset("lib/Images/ArrowBack.png",
-                          width: 30,
-                          height: 30,),
-                        SizedBox(width: 80,),
-                        Text(
-                          "تعديل الاسم",
-                          style: TextStyle(
-                            color: HexColor("#FFFFFF"),
-                            fontSize: 30,
-                            fontWeight: FontWeight.w400,
-                          ),
+                        InkWell(
+                          onTap: ()=>Helper.gotoScreen(context, Constant.Home),
+                          child: arrowBack(),
                         ),
+                        SizedBox(width: 100),
+                        textView("تعديل الاسم", 0.3)
                       ],
                     ),
                   ),
@@ -92,41 +94,27 @@ class ChangeName extends StatelessWidget {
                               topRight: const Radius.circular(40.0))),
                       child: Column(
                         children: [
-                          Container(
-                            width: 200,
-                            height: 45,
-                            color: Colors.green,
-                            margin: const EdgeInsets.only(left: 80.0, top: 100.0),
-                            child: TextField(
-                              style: TextStyle(),
-                              keyboardType: TextInputType.name,
-                              textInputAction: TextInputAction.done,
+                          SizedBox(height: 100),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 50),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                textView("الاسم", 0.0),
+                              ],
                             ),
                           ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Container(
-                            width: 350,
-                            child: Divider(color: Colors.white),
-                          ),
+                          SizedBox(height: 10),
+                          textFieldView(
+                              TextInputType.name,
+                              30,
+                              TextDirection.ltr),
+
+                          whiteDivider(),
+                          SizedBox(height: 20),
+
                           Expanded(
-                            child: Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                margin: const EdgeInsets.only(bottom: 20.0),
-                                width: 200,
-                                height: 45,
-                                decoration: BoxDecoration(
-                                    color: Colors.green,
-                                    borderRadius:
-                                    BorderRadius.all(Radius.circular(30.0))),
-                                child: TextButton(
-                                  onPressed: null,
-                                  child: Text("حفظ"),
-                                ),
-                              ),
-                            ),
+                            child: buttonView("حفظ"),
                           )
                         ],
                       ),
@@ -135,13 +123,9 @@ class ChangeName extends StatelessWidget {
               ],
             ),
             Positioned(
-              child: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    'https://www.woolha.com/media/2020/03/eevee.png'),
-                maxRadius: 75,
-                minRadius: 75,
-              ),
-              top: 110,
+              child: circleAvater(
+                  "https://www.woolha.com/media/2020/03/eevee.png"),
+              top: 150,
             ),
           ])),
     );

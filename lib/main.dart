@@ -1,5 +1,8 @@
-
 import 'package:elm2oul/ChangeUserProfile/Profile.dart';
+import 'package:elm2oul/Login/Register.dart';
+import 'package:elm2oul/PasswordReset/ResetPassword.dart';
+import 'package:elm2oul/PasswordReset/ResetPhone.dart';
+import 'package:elm2oul/Uitils/Constant.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
@@ -8,9 +11,15 @@ import 'ChangeCompanyProfile/CompanyProfile.dart';
 import 'ChangeUserProfile/ChangeName.dart';
 import 'ChangeUserProfile/ChangePassword.dart';
 import 'ChangeUserProfile/ChangePhone.dart';
+import 'ChangeUserProfile/Eld3m.dart';
+import 'ChangeUserProfile/Location.dart';
+import 'Home.dart';
+import 'Login/Login.dart';
+import 'PasswordReset/ResetCode.dart';
 import 'Reset/FirstReset.dart';
 import 'Status/ChangeStatus.dart';
 import 'Status/Status.dart';
+import 'faveorite.dart';
 
 
 void main() {
@@ -21,11 +30,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: Login(),
+      routes: {
+        Constant.ChangeName:(context) =>ChangeName(),
+        Constant.ChangePhone:(context) =>ChangePhone(),
+        Constant.ChangePassword:(context) =>ChangePassword(),
+        Constant.Eld3m:(context) =>Eld3m(),
+        Constant.ResetCode:(context) =>ResetCode(),
+        Constant.Register:(context) =>Register(),
+        Constant.Login:(context) =>Login(),
+        Constant.Profile:(context) => Profile(),
+        Constant.Location:(context) => Location(),
+        Constant.Home:(context)=>DemoPageState(),
+        Constant.Favorite:(context)=>compDetail(),
+
+      },
     );
   }
 }
@@ -46,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //   title: Text("Elm2oul"),
       // ),
       body: SplashScreenView(
-        navigateRoute: ChangePassword(),
+        navigateRoute: Profile(),
         duration: 3000,
         imageSize: 250,
         imageSrc: "lib/Images/splashImage.png",
