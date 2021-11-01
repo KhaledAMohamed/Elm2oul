@@ -25,7 +25,7 @@ class textFieldView extends StatelessWidget{
              decoration: BoxDecoration(
                  color: Colors.white,
                  borderRadius: BorderRadius.all(Radius
-                     .circular(20))
+                     .circular(50))
              ),
 
              child: Expanded(

@@ -3,10 +3,12 @@ import 'package:elm2oul/Component/bottonView.dart';
 import 'package:elm2oul/Component/textFieldView.dart';
 import 'package:elm2oul/Component/textView.dart';
 import 'package:elm2oul/Uitils/Constant.dart';
+import 'package:elm2oul/Uitils/FirebaseUtili.dart';
 import 'package:elm2oul/Uitils/Helper.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:toggle_switch/toggle_switch.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -25,7 +27,7 @@ class Login extends StatelessWidget {
               colors: [
                 HexColor("#fdad9c"),
                 HexColor("#FC7C51"),
-                HexColor("#fdad9c"),
+                 HexColor("#fdad9c"),
               ],
             ),
           ),
@@ -111,7 +113,10 @@ class Login extends StatelessWidget {
               ),
               Spacer(),
               InkWell(
-                  onTap: ()=>Helper.gotoScreen(context, Constant.Home),
+                  onTap: (){
+                    Helper.gotoScreen(context, Constant.Home);
+                    FirebaseUtili.saveNewUser("khaled");
+                  },
                   child: buttonView("دخول",color: Colors.black))
 
             ],

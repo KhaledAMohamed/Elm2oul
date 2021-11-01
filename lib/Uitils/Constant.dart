@@ -1,4 +1,6 @@
 class Constant{
+
+  //Screens
   static const ChangeName = "/ChangeName";
   static const ChangePassword = "/ChangePassword";
   static const ChangePhone = "/ChangePhone";
@@ -12,6 +14,11 @@ class Constant{
   static const ResetCode = "/ResetCode";
   static const ResetPhone = "/ResetPhone";
   static const ResetPassword = "/ResetPassword";
+
+  //Firebase
+  static const Users ="Users";
+  static const UsersName ="Name";
+  static const UsersPhone ="Phone";
 
 
 }

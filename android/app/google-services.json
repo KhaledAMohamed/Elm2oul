@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "471402225419",
+    "project_id": "elm2oul-329611",
+    "storage_bucket": "elm2oul-329611.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471402225419:android:d97eca407b2d49daebcc0e",
+        "android_client_info": {
+          "package_name": "com.example.elm2oul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471402225419-dukjfdj1tije24l2dfk9mirlar1fifg8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.elm2oul",
+            "certificate_hash": "89021c325d37fab87954ecd82b3a728784d43e15"
+          }
+        },
+        {
+          "client_id": "471402225419-v3kt8kni7lf5nkgr0l6us137u1lfdvov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-xDO5bVm6p6arLba3uQinsLIAsQhJZrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471402225419-v3kt8kni7lf5nkgr0l6us137u1lfdvov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

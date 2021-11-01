@@ -7,6 +7,7 @@ class textView extends StatelessWidget{
   Color? color = HexColor("#FFFFFF");
 
   textView(this._text,this._lineHeight,{this.color});
+
   @override
   Widget build(BuildContext context) {
     return Text(
