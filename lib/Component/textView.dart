@@ -12,9 +12,7 @@ class textView extends StatelessWidget{
     return Text(
       _text,
       textAlign: TextAlign.center,
-
       style: TextStyle(
-
         fontStyle: FontStyle.normal,
         height:_lineHeight,
         color: color,

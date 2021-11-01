@@ -17,6 +17,7 @@ class ChangePhone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -87,7 +88,7 @@ class ChangePhone extends StatelessWidget {
                       children: [
                         SizedBox(height: 100),
                         Padding(
-                          padding: const EdgeInsets.only(right: 50),
+                          padding: const EdgeInsets.only(right: 50,bottom: 5),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
@@ -96,10 +97,13 @@ class ChangePhone extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 10),
-                        textFieldView(TextInputType.phone, 11, TextDirection.ltr),
+                        textFieldView(
+                            textInputType: TextInputType.phone,
+                            textDirection: TextDirection.ltr),
                         SizedBox(height: 20),
                         whiteDivider(),
-                        Expanded(child:buttonView("حفظ")),
+                        Spacer(),
+                        buttonView("حفظ"),
                       ],
                     ),
                   ),
@@ -108,7 +112,7 @@ class ChangePhone extends StatelessWidget {
             ),
             Positioned(
               child: circleAvater(
-                  "https://www.woolha.com/media/2020/03/eevee.png"),
+                  "https://www.woolha.com/media/2020/03/eevee.png",Size: 50),
               top: 150,
             ),
           ])),

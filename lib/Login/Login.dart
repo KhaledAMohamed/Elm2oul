@@ -31,7 +31,6 @@ class Login extends StatelessWidget {
           ),
           child:Column(
             mainAxisSize: MainAxisSize.min,
-
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               SizedBox(height: 60),
@@ -43,12 +42,9 @@ class Login extends StatelessWidget {
               ),
               SizedBox(height: 30),
               Row(
-
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    // width: 300,
-                    // height: 40,
                     margin: EdgeInsets.only(left: 15,right: 15),
                     child: Directionality(
                       textDirection: TextDirection.rtl,
@@ -87,16 +83,16 @@ class Login extends StatelessWidget {
               ),
               SizedBox(height: 50),
               Padding(
-                padding: const EdgeInsets.only(right
-                    : 45),
-                child: textView("رقم الهاتف", 1.5,color: Colors.white,),
+                padding: const EdgeInsets.only(right: 45,bottom: 5),
+                child: textView("رقم الهاتف", 1.5,color: Colors.white),
               ),
-              textFieldView(TextInputType.phone,11,TextDirection.ltr),
+              textFieldView(
+                  textInputType: TextInputType.phone,
+                  textDirection: TextDirection.ltr),
               SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(right
-                    : 45),
-                child: textView("كلمة المرور ", 1.5,color: Colors.white,),
+                padding: const EdgeInsets.only(right: 45,bottom: 5),
+                child: textView("كلمة المرور ", 1.5,color: Colors.white),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 30,right: 30),
@@ -109,13 +105,14 @@ class Login extends StatelessWidget {
                   InkWell(
                     onTap: ()=>Helper.gotoScreen(context, Constant.ResetPhone),
                       child:
-                      textView("هل نسيت كلمة المرور ؟", 2.2,color: Colors.white)
+                      textView("هل نسيت كلمة المرور ؟",1.5,color: Colors.white)
                   ),
                 ],
               ),
-              Flexible (child: InkWell(
+              Spacer(),
+              InkWell(
                   onTap: ()=>Helper.gotoScreen(context, Constant.Home),
-                  child: buttonView("دخول")))
+                  child: buttonView("دخول",color: Colors.black))
 
             ],
           )

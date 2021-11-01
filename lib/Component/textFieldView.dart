@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class textFieldView extends StatelessWidget{
-  TextInputType _textInputType;
-  TextDirection _textDirection;
-  int _maxLength ;
+  TextInputType textInputType;
+  TextDirection textDirection;
+  // int _maxLength ;
+  // String? textCounter;
 
 
-  textFieldView(this._textInputType,this._maxLength,this._textDirection);
+  textFieldView({required this.textInputType,required this.textDirection});
 
   @override
   Widget build(BuildContext context) {
@@ -28,19 +30,18 @@ class textFieldView extends StatelessWidget{
 
              child: Expanded(
                child: TextField(
-                 textDirection:_textDirection,
+                 textDirection:textDirection,
                  showCursor:true,
                  maxLines: 1,
-              //   maxLength: _maxLength ,
-                 keyboardType: _textInputType,
+                 keyboardType: textInputType,
                  textInputAction: TextInputAction.done,
                  textAlignVertical: TextAlignVertical.center,
                  decoration: InputDecoration(
-                     contentPadding: EdgeInsets.only(right: 10,bottom: 15,left: 10,
-                         top: 10),
+                     contentPadding: EdgeInsets.only(
+                         right: 10,
+                         bottom: 15,
+                         left: 10),
                      border: InputBorder.none,
-                     // hintText: _hintText,
-                     // hintTextDirection: TextDirection.rtl,
                  ),
 
                ),

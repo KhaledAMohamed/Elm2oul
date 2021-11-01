@@ -221,7 +221,7 @@ class Profile extends StatelessWidget {
                 alignment: Alignment.bottomRight,
                 children: [
                   circleAvater(
-                      "https://www.woolha.com/media/2020/03/eevee.png"),
+                      "https://www.woolha.com/media/2020/03/eevee.png",Size: 50),
                   Padding(
                     padding: const EdgeInsets.only(right: 15, bottom: 10),
                     child: Icon(Icons.camera_alt_outlined, color: Colors.white),

@@ -12,6 +12,7 @@ class ResetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -35,7 +36,7 @@ class ResetPassword extends StatelessWidget {
             ),
             SizedBox(height:10),
             Padding(
-              padding: const EdgeInsets.only(left: 15,right: 15),
+              padding: const EdgeInsets.only(left: 15,right: 15,top: 5),
               child: TextFieldViewPassword(),
             ),
             SizedBox(height:30),
@@ -50,12 +51,13 @@ class ResetPassword extends StatelessWidget {
             ),
             SizedBox(height:10),
             Padding(
-              padding: const EdgeInsets.only(left: 15,right: 15),
+              padding: const EdgeInsets.only(left: 15,right: 15,top: 5),
               child: TextFieldViewPassword(),
             ),
-            Expanded(child: InkWell(
+            Spacer(),
+            InkWell(
               onTap: ()=>Helper.gotoScreen(context, Constant.Login),
-                child: buttonView("حفظ"))),
+                child: buttonView("حفظ",color: Colors.white)),
           ],
         ),
 

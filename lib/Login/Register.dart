@@ -36,19 +36,17 @@ class Register extends StatelessWidget {
         ),
         child:Column(
           mainAxisSize: MainAxisSize.min,
-
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             SizedBox(height: 60),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                textView("مرحبك بك", 3.5),
+                textView("مرحبك بك", 3.5,color: Colors.white),
               ],
             ),
             SizedBox(height: 30),
             Row(
-
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
@@ -91,16 +89,16 @@ class Register extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Padding(
-              padding: const EdgeInsets.only(right
-                  : 45),
-              child: textView("الاسم", 1.5),
+              padding: const EdgeInsets.only(right: 45,bottom: 5),
+              child: textView("الاسم", 1.5,color: Colors.white),
             ),
-            textFieldView(TextInputType.name,30,TextDirection.ltr),
+            textFieldView(
+                textInputType: TextInputType.name,
+                textDirection: TextDirection.rtl),
             SizedBox(height: 20),
             Padding(
-              padding: const EdgeInsets.only(right
-                  : 45),
-              child: textView("كلمة المرور ", 1.5),
+              padding: const EdgeInsets.only(right: 45,bottom: 5),
+              child: textView("كلمة المرور ", 1.5,color: Colors.white),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 30,right: 30),
@@ -108,12 +106,13 @@ class Register extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Padding(
-              padding: const EdgeInsets.only(right
-                  : 45),
-              child: textView("رقم الهاتف", 1.5),
+              padding: const EdgeInsets.only(right: 45,bottom: 5),
+              child: textView("رقم الهاتف", 1.5,color: Colors.white),
             ),
-            textFieldView(TextInputType.phone,11,TextDirection.ltr),
+            textFieldView(textInputType: TextInputType.phone,textDirection:
+            TextDirection.ltr),
             SizedBox(height: 40,),
+            //radio button
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -175,10 +174,11 @@ class Register extends StatelessWidget {
                 ],
               ),
             ),
-            Flexible (child: buttonView("تسجيل"))
-
-
-
+            Spacer(),
+            InkWell(
+                child: buttonView("تسجيل",color: Colors.black),
+                onTap: ()=>Helper.gotoScreen(context, Constant.Home)
+            )
           ],
         )
       ),

@@ -45,7 +45,7 @@ class Location extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                circleAvater("https://www.woolha.com/media/2020/03/eevee.png"),
+                circleAvater("https://www.woolha.com/media/2020/03/eevee.png",Size: 50),
               ],
             ),
             SizedBox(height: 40,),

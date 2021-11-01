@@ -41,12 +41,13 @@ class DemoPageState extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 10),
                   child: circleAvater(
-                      "https://www.woolha.com/media/2020/03/eevee.png"),
+                      "https://www.woolha.com/media/2020/03/eevee.png",Size:
+                  25),
                 ),
                 Spacer(),
                 Padding(
                   padding: const EdgeInsets.only(right: 10),
-                  child: textView("مرحباا ", 2.0),
+                  child: textView("مرحباا ", 2.0,color: Colors.white),
                 ),
               ],
             ),
@@ -56,10 +57,10 @@ class DemoPageState extends StatelessWidget {
 
               decoration: BoxDecoration(
                 // color: Colors.black,
-                borderRadius: BorderRadius.circular(5.0,),
+                borderRadius: BorderRadius.circular(5.0),
               ),
               padding: EdgeInsets.only(left: 20),
-              child: textFieldView(TextInputType.text, 20, TextDirection.rtl),
+              child: textFieldView(textInputType: TextInputType.text,textDirection: TextDirection.rtl),
             ),
 
             SizedBox(height: 15.0),
@@ -69,7 +70,7 @@ class DemoPageState extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  textView("الشركات الاكثرا التقيم", 0.2),
+                  textView("الشركات الاكثرا التقيم", 0.2,color: Colors.white,),
                 ],
               ),
             ),
@@ -95,7 +96,7 @@ class DemoPageState extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  textView("الشركات المفضله", 0.2)
+                  textView("الشركات المفضله", 0.2,color: Colors.white,)
                 ],
               ),
             ),
@@ -116,11 +117,11 @@ class DemoPageState extends StatelessWidget {
             ),
             SizedBox(height: 15.0),
             Padding(
-              padding: const EdgeInsets.only(right: 10),
+              padding: const EdgeInsets.only(right: 10,top: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                 textView("الخدمات", 0.2),
+                 textView("الخدمات", 0.2,color: Colors.white,),
                 ],
               ),
             ),
@@ -147,11 +148,11 @@ class DemoPageState extends StatelessWidget {
         Stack(
           alignment: AlignmentDirectional.topCenter,
           children: [
-            CircleAvatar(
-              radius: 30.0,
-              backgroundImage: NetworkImage(
-                  'https://avatars.githubusercontent.com/u/34492145?v=4'),
-            ),
+
+            circleAvater(
+                'https://avatars.githubusercontent.com/u/34492145?v=4',
+                Radius: 30.0),
+
             SizedBox(
               height: 50,
             ),

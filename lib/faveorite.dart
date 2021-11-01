@@ -10,7 +10,7 @@ import 'Component/circleAvatar.dart';
 import 'Uitils/Constant.dart';
 import 'Uitils/Helper.dart';
 
-class compDetail extends StatelessWidget {
+class Favorite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

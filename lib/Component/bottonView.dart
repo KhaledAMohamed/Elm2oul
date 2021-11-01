@@ -4,7 +4,8 @@ import 'package:hexcolor/hexcolor.dart';
 
 class buttonView extends StatelessWidget{
   String _text;
-  buttonView (this._text);
+  Color? color;
+  buttonView (this._text,{this.color});
   @override
   Widget build(BuildContext context) {
     return  Align(
@@ -20,7 +21,7 @@ class buttonView extends StatelessWidget{
             BorderRadius.all(Radius.circular(30.0))),
         child: TextButton(
             onPressed: null,
-            child: textView(_text,0.2)
+            child: textView(_text,0.2,color: color)
         ),
       ),
     );

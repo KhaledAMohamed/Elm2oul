@@ -22,7 +22,7 @@ class BottonNavgation extends StatelessWidget {
           children: <Widget>[
             Container(
               margin: EdgeInsets.only(left: 28.0),
-              padding: EdgeInsets.only(left: 5, bottom: 5),
+              padding: EdgeInsets.only( bottom: 5),
               decoration: BoxDecoration(
                 color: ColorLocation,
                 borderRadius: BorderRadius.all(Radius.circular(120.0)),

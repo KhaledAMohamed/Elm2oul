@@ -21,6 +21,7 @@ class _ChangePasswordState extends State<ChangePassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -90,10 +91,8 @@ class _ChangePasswordState extends State<ChangePassword> {
 
                           Container(
                             width: 350,
-
-
                             margin: const EdgeInsets.only(top: 100.0),
-
+                            padding: const EdgeInsets.only(bottom: 5),
                             child: Column(
                               children: [
                                 Row(
@@ -107,6 +106,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 SizedBox(height:30),
                                 Container(
                                   margin: const EdgeInsets.only(top: 15.0),
+                                  padding: const EdgeInsets.only(bottom: 5),
                                   child:  Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
@@ -125,7 +125,8 @@ class _ChangePasswordState extends State<ChangePassword> {
 
                           SizedBox(height: 40),
                           whiteDivider(),
-                          Expanded(child: buttonView("حفظ"))
+                          Spacer(),
+                          buttonView("حفظ",color: Colors.white,)
                         ],
                       ),
                     ),
@@ -134,7 +135,7 @@ class _ChangePasswordState extends State<ChangePassword> {
             ),
             Positioned(
               child:circleAvater(
-                  'https://www.woolha.com/media/2020/03/eevee.png'),
+                  'https://www.woolha.com/media/2020/03/eevee.png',Size: 50),
               top: 150,
             ),
           ])),

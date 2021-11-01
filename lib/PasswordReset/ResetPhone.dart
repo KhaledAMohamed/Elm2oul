@@ -14,6 +14,7 @@ class ResetPhone extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -33,7 +34,7 @@ class ResetPhone extends StatelessWidget {
                   onTap:()=>Helper.gotoScreen(context, Constant.Login),
                     child: arrowBack()),
                 SizedBox(width: 75),
-                textView('هل نسيت كلمة المرور ؟', 3,color: Colors.white,),
+                textView('هل نسيت كلمة المرور ؟', 3,color: Colors.white),
               ],
             ),
             SizedBox(height: 30),
@@ -43,7 +44,9 @@ class ResetPhone extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(right:15 ),
-              child: textFieldView(TextInputType.phone, 11, TextDirection.ltr),
+              child:textFieldView(
+                  textInputType: TextInputType.phone,
+                  textDirection: TextDirection.ltr),
             ),
             SizedBox(height: 10),
             Padding(
@@ -57,9 +60,10 @@ class ResetPhone extends StatelessWidget {
               padding: const EdgeInsets.only(left: 10,right: 10),
               child: whiteDivider(),
             ),
-            Expanded(child: InkWell(
+            Spacer(),
+            InkWell(
               onTap:()=> Helper.gotoScreen(context, Constant.ResetCode),
-                child: buttonView("ارسال"))),
+                child: buttonView("ارسال",color: Colors.white,)),
           ],
         ),
       ),

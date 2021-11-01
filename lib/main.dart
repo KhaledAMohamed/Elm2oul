@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: Login(),
+      home: MyHomePage(),
       routes: {
         Constant.ChangeName:(context) =>ChangeName(),
         Constant.ChangePhone:(context) =>ChangePhone(),
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
         Constant.Profile:(context) => Profile(),
         Constant.Location:(context) => Location(),
         Constant.Home:(context)=>DemoPageState(),
-        Constant.Favorite:(context)=>compDetail(),
+        Constant.Favorite:(context)=>Favorite(),
         Constant.ResetCode:(context) =>ResetCode(),
         Constant.ResetPhone:(context) =>ResetPhone(),
         Constant.ResetPassword:(context) =>ResetPassword(),
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //   title: Text("Elm2oul"),
       // ),
       body: SplashScreenView(
-        navigateRoute: Profile(),
+        navigateRoute: Login(),
         duration: 3000,
         imageSize: 250,
         imageSrc: "lib/Images/splashImage.png",

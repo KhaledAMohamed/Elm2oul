@@ -13,7 +13,8 @@ class ResetCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     body: Container(
+      resizeToAvoidBottomInset: false,
+      body: Container(
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
@@ -38,7 +39,7 @@ class ResetCode extends StatelessWidget {
           SizedBox(height: 30),
           Padding(
             padding: const EdgeInsets.only(right: 25),
-            child: textView("ادخل الكود", 3),
+            child: textView("ادخل الكود", 3,color: Colors.white),
           ),
           SizedBox(height: 30),
           Row(
@@ -62,9 +63,10 @@ class ResetCode extends StatelessWidget {
                 ),
               ],
             ),
-          Expanded(child: InkWell(
+          Spacer(),
+          InkWell(
             onTap: ()=>Helper.gotoScreen(context, Constant.ResetPassword),
-              child: buttonView("ارسال الكود")))
+              child: buttonView("ارسال الكود",color: Colors.white))
           ],
       ),
     ),
